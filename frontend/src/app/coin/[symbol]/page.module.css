@@ -1,0 +1,133 @@
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.header {
+    margin-bottom: 24px;
+}
+
+.backButton {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 16px;
+}
+
+.backButton:hover {
+    background-color: var(--bg-hover);
+    border-color: var(--binance-yellow);
+}
+
+.coinHeader {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.coinInfo {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.coinSymbol {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.coinFullName {
+    font-size: 16px;
+    color: var(--text-secondary);
+}
+
+.priceInfo {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+}
+
+.currentPrice {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--binance-yellow);
+}
+
+.positive {
+    color: var(--green-positive);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.negative {
+    color: var(--red-negative);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.liveStatus {
+    margin-left: auto;
+}
+
+.connected {
+    color: var(--green-positive);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.disconnected {
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.loading,
+.notFound {
+    text-align: center;
+    padding: 80px 24px;
+    color: var(--text-secondary);
+}
+
+.notFound h1 {
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.notFound p {
+    margin-bottom: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 16px;
+    }
+
+    .coinHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .coinSymbol {
+        font-size: 24px;
+    }
+
+    .currentPrice {
+        font-size: 22px;
+    }
+
+    .liveStatus {
+        margin-left: 0;
+    }
+}

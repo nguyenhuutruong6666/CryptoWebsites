@@ -1,0 +1,82 @@
+.filterContainer {
+    padding: 24px;
+    background-color: var(--bg-primary);
+}
+
+.mainTabs {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.mainTab {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 0;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.mainTab:hover {
+    color: var(--text-primary);
+}
+
+.mainTab.active {
+    color: var(--text-primary);
+}
+
+.mainTab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: var(--binance-yellow);
+}
+
+.filterTags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.filterTag {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filterTag:hover {
+    background-color: var(--bg-hover);
+    border-color: var(--text-secondary);
+}
+
+.filterTag.active {
+    background-color: var(--bg-hover);
+    color: var(--text-primary);
+    border-color: var(--binance-yellow);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .mainTabs {
+        overflow-x: auto;
+        gap: 16px;
+    }
+
+    .filterTags {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+}

@@ -1,0 +1,141 @@
+.chartContainer {
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 24px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 24px;
+}
+
+.chartHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.chartTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.updateInfo {
+    font-size: 12px;
+    color: var(--text-secondary);
+    background-color: var(--bg-primary);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.timeframeButtons {
+    display: flex;
+    gap: 8px;
+}
+
+.timeframeBtn {
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.timeframeBtn:hover {
+    background-color: var(--bg-hover);
+    color: var(--text-primary);
+    border-color: var(--binance-yellow);
+}
+
+.timeframeBtn.active {
+    background-color: var(--binance-yellow);
+    color: #000;
+    border-color: var(--binance-yellow);
+}
+
+.loading {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .chartContainer {
+        padding: 16px;
+        margin-bottom: 16px;
+        overflow-x: hidden;
+    }
+
+    .chartTitle {
+        font-size: 16px;
+    }
+
+    .chartHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .headerLeft {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .timeframeButtons {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .timeframeBtn {
+        flex: 1;
+        min-width: 55px;
+        padding: 8px 6px;
+        font-size: 11px;
+    }
+
+    .loading {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chartContainer {
+        padding: 12px;
+        margin-left: -12px;
+        margin-right: -12px;
+        border-radius: 0;
+    }
+
+    .chartTitle {
+        font-size: 14px;
+    }
+
+    .updateInfo {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+
+    .timeframeBtn {
+        min-width: 50px;
+        padding: 6px 4px;
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,83 @@
+.overview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    padding: 0 24px;
+}
+
+.card {
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.cardTitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.coinList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.coinItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.coinInfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.coinIcon {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.coinDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.coinSymbol {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.coinPrice {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.positive {
+    color: var(--green-positive);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.negative {
+    color: var(--red-negative);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .overview {
+        display: none;
+    }
+}

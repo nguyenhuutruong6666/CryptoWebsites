@@ -1,0 +1,174 @@
+.navbar {
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    height: 64px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 32px;
+}
+
+.logoText {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--binance-yellow);
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex: 1;
+}
+
+.navLink {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 0;
+    transition: color 0.2s ease;
+    position: relative;
+}
+
+.navLink:hover {
+    color: var(--text-primary);
+}
+
+.navLink.active {
+    color: var(--text-primary);
+}
+
+.navLink.active::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: var(--binance-yellow);
+}
+
+.rightSection {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-primary);
+    border-radius: 4px;
+    padding: 8px 12px;
+    gap: 8px;
+}
+
+.searchIcon {
+    font-size: 16px;
+}
+
+.searchInput {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-size: 14px;
+    width: 200px;
+}
+
+.searchInput::placeholder {
+    color: var(--text-secondary);
+}
+
+.userActions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btnPrimary {
+    background-color: var(--binance-yellow);
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btnPrimary:hover {
+    background-color: #e5ab1a;
+}
+
+.btnSecondary {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btnSecondary:hover {
+    background-color: var(--bg-hover);
+}
+
+.iconBtn {
+    background-color: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconBtn:hover {
+    background-color: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.iconBtn svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .navLinks {
+        display: none;
+    }
+
+    .searchBox {
+        display: none;
+    }
+
+    .userActions {
+        gap: 8px;
+    }
+}
